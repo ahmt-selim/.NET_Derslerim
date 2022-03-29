@@ -16,5 +16,30 @@ namespace Hesap_Makinesi
         {
             InitializeComponent();
         }
+        //ilk değişiklik yapıldı.
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
