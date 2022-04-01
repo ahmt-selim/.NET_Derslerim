@@ -23,7 +23,11 @@ namespace Hesap_Makinesi
         }
         private void button13_Click(object sender, EventArgs e)
         {
-
+            if (txtText.Text != null || txtText.Text != "")
+            {
+                lblGoster.Text = txtText.Text + " - ";
+            }
+            txtText.Clear();
         }
 
         private void button24_Click(object sender, EventArgs e)
@@ -40,7 +44,7 @@ namespace Hesap_Makinesi
         {
             if (txtText.Text!=null || txtText.Text!="")
             {
-                lblGoster.Text = txtText.Text + " +";
+                lblGoster.Text = txtText.Text + " + ";
             }
             txtText.Clear();
         }
@@ -128,8 +132,7 @@ namespace Hesap_Makinesi
             catch (Exception)
             {
 
-            }
-            
+            }          
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -146,15 +149,85 @@ namespace Hesap_Makinesi
                         sayi1 =double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
                         sonuc = sayi1 + sayi2;
                     }
+                    if (item.ToString() == "-")
+                    {
+                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
+                        sonuc = sayi1 - sayi2;
+                    }
+                    if (item.ToString() == "*")
+                    {
+                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
+                        sonuc = sayi1 * sayi2;
+                    }
+                    if (item.ToString() == "/")
+                    {
+                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
+                        sonuc = sayi1 / sayi2;
+                    }
+                    if (item.ToString() == "√")
+                    {
+                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
+                        double d =Math.Pow(sayi2, 0.5);
+                        //if (sayi1==null)
+                        //{
+                        //    sayi1 = 1;
+                        //}
+                        sonuc = Math.Pow(sayi1, sayi2);
+                    }
+                    if (item.ToString() == "^")
+                    {
+                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
+                        sonuc = Math.Pow(sayi1 , sayi2);
+                    }
+
                 }
                 lblGoster.Text = lblGoster.Text + sayi2.ToString() + " = " + sonuc.ToString();
                 txtText.Clear();
             }
             catch (Exception)
             {
-
-                throw;
             }
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            lblGoster.Text = "";
+        }
+
+        private void btnBol_Click(object sender, EventArgs e)
+        {
+            if (txtText.Text != null || txtText.Text != "")
+            {
+                lblGoster.Text = txtText.Text + " / ";
+            }
+            txtText.Clear();
+        }
+
+        private void btnCarp_Click(object sender, EventArgs e)
+        {
+            if (txtText.Text != null || txtText.Text != "")
+            {
+                lblGoster.Text = txtText.Text + " * ";
+            }
+            txtText.Clear();//√¯
+        }
+
+        private void btnKarekok_Click(object sender, EventArgs e)
+        {
+            if (txtText.Text != null || txtText.Text != "")
+            {
+                lblGoster.Text = txtText.Text + " √¯ ";
+            }
+            txtText.Clear();
+        }
+
+        private void btnUsAlma_Click(object sender, EventArgs e)
+        {
+            if (txtText.Text != null || txtText.Text != "")
+            {
+                lblGoster.Text = txtText.Text + "^";
+            }
+            txtText.Clear();
         }
     }
 }

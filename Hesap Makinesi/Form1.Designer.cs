@@ -57,9 +57,8 @@
             this.button26 = new System.Windows.Forms.Button();
             this.txtText = new System.Windows.Forms.RichTextBox();
             this.lblGoster = new System.Windows.Forms.Label();
-            this.numericChartRangeControlClient1 = new DevExpress.XtraEditors.NumericChartRangeControlClient();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericChartRangeControlClient1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -206,6 +205,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnParantezKapa);
             this.groupBox1.Controls.Add(this.btnPi);
             this.groupBox1.Controls.Add(this.btnParantezAc);
@@ -271,7 +271,7 @@
             // 
             // button15
             // 
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button15.Location = new System.Drawing.Point(82, 234);
             this.button15.Name = "button15";
@@ -289,8 +289,9 @@
             this.btnKarekok.Name = "btnKarekok";
             this.btnKarekok.Size = new System.Drawing.Size(65, 65);
             this.btnKarekok.TabIndex = 32;
-            this.btnKarekok.Text = "√";
+            this.btnKarekok.Text = "√¯";
             this.btnKarekok.UseVisualStyleBackColor = true;
+            this.btnKarekok.Click += new System.EventHandler(this.btnKarekok_Click);
             // 
             // btnUsAlma
             // 
@@ -302,6 +303,7 @@
             this.btnUsAlma.TabIndex = 31;
             this.btnUsAlma.Text = "^";
             this.btnUsAlma.UseVisualStyleBackColor = true;
+            this.btnUsAlma.Click += new System.EventHandler(this.btnUsAlma_Click);
             // 
             // btn
             // 
@@ -348,6 +350,7 @@
             this.btnBol.TabIndex = 27;
             this.btnBol.Text = "/";
             this.btnBol.UseVisualStyleBackColor = true;
+            this.btnBol.Click += new System.EventHandler(this.btnBol_Click);
             // 
             // btnCarp
             // 
@@ -359,6 +362,7 @@
             this.btnCarp.TabIndex = 26;
             this.btnCarp.Text = "*";
             this.btnCarp.UseVisualStyleBackColor = true;
+            this.btnCarp.Click += new System.EventHandler(this.btnCarp_Click);
             // 
             // button25
             // 
@@ -370,6 +374,7 @@
             this.button25.TabIndex = 39;
             this.button25.Text = "C";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button26
             // 
@@ -402,6 +407,17 @@
             this.lblGoster.TabIndex = 42;
             this.lblGoster.Text = "label2";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(224, 92);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "1/x";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -429,7 +445,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericChartRangeControlClient1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,7 +481,7 @@
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.RichTextBox txtText;
         private System.Windows.Forms.Label lblGoster;
-        private DevExpress.XtraEditors.NumericChartRangeControlClient numericChartRangeControlClient1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
