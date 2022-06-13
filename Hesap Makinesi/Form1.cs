@@ -137,61 +137,13 @@ namespace Hesap_Makinesi
 
         private void button15_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double sonuc = 0;
-                double sayi1;
-                double sayi2 = double.Parse(txtText.Text);
-                foreach (char item in lblGoster.Text)
-                {
-                    if (item.ToString() == "+")
-                    {
-                        sayi1 =double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
-                        sonuc = sayi1 + sayi2;
-                    }
-                    if (item.ToString() == "-")
-                    {
-                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
-                        sonuc = sayi1 - sayi2;
-                    }
-                    if (item.ToString() == "*")
-                    {
-                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
-                        sonuc = sayi1 * sayi2;
-                    }
-                    if (item.ToString() == "/")
-                    {
-                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
-                        sonuc = sayi1 / sayi2;
-                    }
-                    if (item.ToString() == "√")
-                    {
-                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
-                        double d =Math.Pow(sayi2, 0.5);
-                        //if (sayi1==null)
-                        //{
-                        //    sayi1 = 1;
-                        //}
-                        sonuc = Math.Pow(sayi1, sayi2);
-                    }
-                    if (item.ToString() == "^")
-                    {
-                        sayi1 = double.Parse(lblGoster.Text.Substring(0, lblGoster.Text.Length - 2));
-                        sonuc = Math.Pow(sayi1 , sayi2);
-                    }
-
-                }
-                lblGoster.Text = lblGoster.Text + sayi2.ToString() + " = " + sonuc.ToString();
-                txtText.Clear();
-            }
-            catch (Exception)
-            {
-            }
+            
         }
 
         private void button25_Click(object sender, EventArgs e)
         {
             lblGoster.Text = "";
+            txtText.Clear();
         }
 
         private void btnBol_Click(object sender, EventArgs e)
@@ -225,9 +177,29 @@ namespace Hesap_Makinesi
         {
             if (txtText.Text != null || txtText.Text != "")
             {
-                lblGoster.Text = txtText.Text + "^";
+                lblGoster.Text = txtText.Text + " ^ ";
             }
             txtText.Clear();
+        }
+
+        private void btnPi_Click(object sender, EventArgs e)
+        {
+            txtText.Text = Math.PI.ToString();
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            lblGoster.Text = txtText.Text + " / " + "2";
+            txtText.Text = (double.Parse(txtText.Text) / 2).ToString();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (txtText.Text != "")
+            {
+                lblGoster.Text = txtText.Text + " % ";
+            }
+            
         }
     }
 }

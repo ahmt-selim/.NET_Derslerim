@@ -41,6 +41,7 @@
             this.btn0 = new System.Windows.Forms.Button();
             this.btnVirgul = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnParantezKapa = new System.Windows.Forms.Button();
             this.btnPi = new System.Windows.Forms.Button();
             this.btnParantezAc = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.button26 = new System.Windows.Forms.Button();
             this.txtText = new System.Windows.Forms.RichTextBox();
             this.lblGoster = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,6 +225,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İşlemler";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(224, 92);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "1/x";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // btnParantezKapa
             // 
             this.btnParantezKapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -246,6 +257,7 @@
             this.btnPi.TabIndex = 35;
             this.btnPi.Text = "π";
             this.btnPi.UseVisualStyleBackColor = true;
+            this.btnPi.Click += new System.EventHandler(this.btnPi_Click);
             // 
             // btnParantezAc
             // 
@@ -268,6 +280,7 @@
             this.button20.TabIndex = 34;
             this.button20.Text = "%";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button15
             // 
@@ -315,6 +328,7 @@
             this.btn.TabIndex = 30;
             this.btn.Text = "½";
             this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnTopla
             // 
@@ -403,20 +417,9 @@
             this.lblGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGoster.Location = new System.Drawing.Point(12, 79);
             this.lblGoster.Name = "lblGoster";
-            this.lblGoster.Size = new System.Drawing.Size(64, 25);
+            this.lblGoster.Size = new System.Drawing.Size(23, 25);
             this.lblGoster.TabIndex = 42;
-            this.lblGoster.Text = "label2";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(224, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 65);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "1/x";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblGoster.Text = "0";
             // 
             // Form1
             // 
