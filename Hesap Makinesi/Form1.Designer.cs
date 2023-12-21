@@ -288,7 +288,7 @@
             this.button15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button15.Location = new System.Drawing.Point(82, 234);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(136, 65);
+            this.button15.Size = new System.Drawing.Size(205, 65);
             this.button15.TabIndex = 33;
             this.button15.Text = "=";
             this.button15.UseVisualStyleBackColor = true;
